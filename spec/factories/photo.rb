@@ -3,7 +3,7 @@
 FactoryBot.define do
   factory :photo do
     name { 'image1.png' }
-    type { 0 }
+    ext { :png }
     size { 1000 }
     opened_at { Time.now.utc }
   end

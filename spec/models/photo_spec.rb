@@ -5,9 +5,9 @@ require 'rails_helper'
 RSpec.describe Photo, type: :model do
   it { is_expected.to validate_presence_of(:name) }
 
-  it { is_expected.to validate_presence_of(:type) }
+  it { is_expected.to validate_presence_of(:ext) }
 
-  it { is_expected.to define_enum_for(:type).with_values(%i[png jpg]) }
+  it { is_expected.to define_enum_for(:ext).with_values(%i[png jpg]) }
 
   it { is_expected.to validate_numericality_of(:size) }
 

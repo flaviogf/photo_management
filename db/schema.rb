@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2021_06_26_130704) do
 
   create_table "photos", force: :cascade do |t|
     t.string "name"
-    t.integer "type"
+    t.integer "ext"
     t.integer "size"
     t.datetime "opened_at"
     t.datetime "created_at", precision: 6, null: false
