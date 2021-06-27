@@ -41,4 +41,11 @@ yarn-debug.log*
 
 # Ignore all uploaded files
 /public/uploads/*
+
 !/public/uploads/.keep
+
+!/public/uploads/cache
+
+public/uploads/cache/*
+
+!/public/uploads/cache/590fed5bbc86f4f9b829b31a2fc723fe.png
