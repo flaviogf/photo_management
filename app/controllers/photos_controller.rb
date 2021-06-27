@@ -12,9 +12,9 @@ class PhotosController < ApplicationController
   end
 
   def create
-    photo = Photo.new photo_params
+    @photo = Photo.new photo_params
 
-    if photo.save
+    if @photo.save
       redirect_to photos_path
     else
       render :new, status: :unprocessable_entity
@@ -42,7 +42,7 @@ class PhotosController < ApplicationController
   private
 
   def photo_params
-    params.require(:photo).permit(:name, :ext, :size).merge(opened_at: Time.now.utc)
+    params.require(:photo).permit(:name, :image).merge(opened_at: Time.now.utc)
   end
 
   def set_photo

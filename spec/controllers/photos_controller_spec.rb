@@ -24,21 +24,19 @@ RSpec.describe PhotosController, type: :controller do
       {
         photo: {
           name: 'image1.png',
-          ext: :png,
-          size: 1000
+          image: '{"id":"590fed5bbc86f4f9b829b31a2fc723fe.png","storage":"cache","metadata":{"filename":"Wallpaper.png","size":126196,"mime_type":"image/png"}}'
         }
       }
     end
 
-    it { is_expected.to permit(:name).for(:create, params: params).on(:photo) }
+    it { is_expected.to permit(:name, :image).for(:create, params: params).on(:photo) }
 
     context 'when request params are valid' do
       let(:params) do
         {
           photo: {
             name: 'image1.png',
-            ext: :png,
-            size: 1000
+            image: '{"id":"590fed5bbc86f4f9b829b31a2fc723fe.png","storage":"cache","metadata":{"filename":"Wallpaper.png","size":126196,"mime_type":"image/png"}}'
           }
         }
       end
@@ -53,8 +51,7 @@ RSpec.describe PhotosController, type: :controller do
         {
           photo: {
             name: '',
-            ext: :png,
-            size: 1000
+            image: '{"id":"590fed5bbc86f4f9b829b31a2fc723fe.png","storage":"cache","metadata":{"filename":"Wallpaper.png","size":126196,"mime_type":"image/png"}}'
           }
         }
       end
@@ -107,13 +104,12 @@ RSpec.describe PhotosController, type: :controller do
         id: photo.id,
         photo: {
           name: 'image1.png',
-          ext: :png,
-          size: 1000
+          image: '{"id":"590fed5bbc86f4f9b829b31a2fc723fe.png","storage":"cache","metadata":{"filename":"Wallpaper.png","size":126196,"mime_type":"image/png"}}'
         }
       }
     end
 
-    it { is_expected.to permit(:name, :ext, :size).for(:update, params: params).on(:photo) }
+    it { is_expected.to permit(:name, :image).for(:update, params: params).on(:photo) }
 
     context 'when request params are valid' do
       let(:params) do
@@ -121,8 +117,7 @@ RSpec.describe PhotosController, type: :controller do
           id: photo.id,
           photo: {
             name: 'image1.png',
-            ext: :png,
-            size: 1000
+            image: '{"id":"590fed5bbc86f4f9b829b31a2fc723fe.png","storage":"cache","metadata":{"filename":"Wallpaper.png","size":126196,"mime_type":"image/png"}}'
           }
         }
       end
@@ -138,8 +133,7 @@ RSpec.describe PhotosController, type: :controller do
           id: photo.id,
           photo: {
             name: '',
-            ext: :png,
-            size: 1000
+            image: '{"id":"590fed5bbc86f4f9b829b31a2fc723fe.png","storage":"cache","metadata":{"filename":"Wallpaper.png","size":126196,"mime_type":"image/png"}}'
           }
         }
       end
