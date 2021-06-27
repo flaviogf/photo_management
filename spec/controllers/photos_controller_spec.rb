@@ -24,7 +24,7 @@ RSpec.describe PhotosController, type: :controller do
       {
         photo: {
           name: 'image1.png',
-          image: '{"id":"590fed5bbc86f4f9b829b31a2fc723fe.png","storage":"cache","metadata":{"filename":"Wallpaper.png","size":126196,"mime_type":"image/png"}}'
+          image: ShrineSupport.image_json
         }
       }
     end
@@ -36,7 +36,7 @@ RSpec.describe PhotosController, type: :controller do
         {
           photo: {
             name: 'image1.png',
-            image: '{"id":"590fed5bbc86f4f9b829b31a2fc723fe.png","storage":"cache","metadata":{"filename":"Wallpaper.png","size":126196,"mime_type":"image/png"}}'
+            image: ShrineSupport.image_json
           }
         }
       end
@@ -51,7 +51,7 @@ RSpec.describe PhotosController, type: :controller do
         {
           photo: {
             name: '',
-            image: '{"id":"590fed5bbc86f4f9b829b31a2fc723fe.png","storage":"cache","metadata":{"filename":"Wallpaper.png","size":126196,"mime_type":"image/png"}}'
+            image: ShrineSupport.image_json
           }
         }
       end
@@ -104,7 +104,7 @@ RSpec.describe PhotosController, type: :controller do
         id: photo.id,
         photo: {
           name: 'image1.png',
-          image: '{"id":"590fed5bbc86f4f9b829b31a2fc723fe.png","storage":"cache","metadata":{"filename":"Wallpaper.png","size":126196,"mime_type":"image/png"}}'
+          image: ShrineSupport.image_json
         }
       }
     end
@@ -117,7 +117,7 @@ RSpec.describe PhotosController, type: :controller do
           id: photo.id,
           photo: {
             name: 'image1.png',
-            image: '{"id":"590fed5bbc86f4f9b829b31a2fc723fe.png","storage":"cache","metadata":{"filename":"Wallpaper.png","size":126196,"mime_type":"image/png"}}'
+            image: ShrineSupport.image_json
           }
         }
       end
@@ -133,7 +133,7 @@ RSpec.describe PhotosController, type: :controller do
           id: photo.id,
           photo: {
             name: '',
-            image: '{"id":"590fed5bbc86f4f9b829b31a2fc723fe.png","storage":"cache","metadata":{"filename":"Wallpaper.png","size":126196,"mime_type":"image/png"}}'
+            image: ShrineSupport.image_json
           }
         }
       end
