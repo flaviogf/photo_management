@@ -3,9 +3,9 @@
 class Photo < ApplicationRecord
   include ImageUploader::Attachment(:image)
 
-  validates :image, presence: true
-
   validates :name, presence: true
+
+  validates :image, presence: true
 
   validates :opened_at, presence: true
 end
