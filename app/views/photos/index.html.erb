@@ -1,0 +1,36 @@
+<main class="photos">
+  <div class="photos__wrapper">
+    <div class="photos__add">
+      <%= link_to 'Add Photo', new_photo_path %>
+    </div>
+
+    <div class="photos__search">
+      <label for="search">Search</label>
+      <input id="search" name="search">
+    </div>
+
+    <table class="photos__table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Last modified</th>
+          <th>File size</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @photos.each do |photo| %>
+          <tr>
+            <td>
+              <div class="photos__table__name">
+                <%= image_tag photo.image_url %>
+                <span><%= photo.name %></span>
+              </div>
+            </td>
+            <td><%= photo.updated_at.strftime('%a %d, %Y') %></td>
+            <td><%= '%d MB' % [photo.image.size / 1000] %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</main>
