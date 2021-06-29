@@ -4,13 +4,11 @@
 // that code so it'll be compiled.
 
 import Rails from "@rails/ujs"
-import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import { configureFileUploadFor } from 'file_upload'
 
 Rails.start()
-Turbolinks.start()
 ActiveStorage.start()
 
 document.addEventListener('DOMContentLoaded', () => document.querySelectorAll('.form__group--file-upload').forEach(configureFileUploadFor))

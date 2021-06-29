@@ -1,0 +1,13 @@
+.photo {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 16px;
+  width: 100%;
+
+  &__wrapper {
+    background-color: #FFFFFF;
+    border: 1px solid #D9DDE4;
+    border-radius: 4px;
+    padding: 16px;
+  }
+}

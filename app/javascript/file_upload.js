@@ -21,8 +21,12 @@ export function configureFileUploadFor(formGroup) {
   })
   .use(FileInput, {
     target: formGroup,
-    pretty: false,
     replaceTargetContent: true,
+    locale: {
+      strings: {
+        chooseFiles: 'Choose a file from your computer',
+      },
+    },
   })
   .use(ProgressBar, {
     target: progressBar,

@@ -11,16 +11,16 @@
     <%= f.file_field :image, class: 'form__field form__field--file' %>
   </div>
 
-  <%= f.submit %>
-<% end %>
+  <% if photo.image_url.present? %>
+    <%= image_tag photo.image_url, class: 'form__image-preview', height: 600 %>
+  <% else %>
+    <img class="form__image-preview"></img>
+  <% end %>
+  
+  <div class="form__progress-bar"></div>
 
-<% if photo.image_url.present? %>
-  <%= image_tag photo.image_url, class: 'form__image-preview', height: 600 %>
-<% else %>
-  <img class="form__image-preview"></img>
+  <%= f.submit 'Confirm', class: 'form__button' %>
 <% end %>
-
-<div class="form__progress-bar"></div>
 
 <div class="form__alert form__alert-error">
   <ul>

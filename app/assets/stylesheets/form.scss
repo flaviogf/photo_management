@@ -1,0 +1,73 @@
+.form {
+  &__group {
+    align-items: center;
+    display: flex;
+    margin: 13px 0;
+    width: 100%;
+
+    &--file-upload {
+      align-items: center;
+      border: 2px dashed #31a2ff;
+      display: flex;
+      height: 164px;
+      justify-content: center;
+
+      button {
+        background-color: transparent;
+        border: none;
+        color: #31a2ff;
+        cursor: pointer;
+        outline: none
+      }
+    }
+  }
+
+  &__label {
+    color: #777777;
+    font-weight: 500;
+    margin-right: 13px;
+  }
+
+  &__field {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height: 35px;
+    outline: none;
+    width: 100%;
+  }
+
+  &__button {
+    align-items: center;
+    background-color: #31a2ff;
+    border: 1px solid #31a2ff;
+    border-radius: 2px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    font-size: 16px;
+    height: 36px;
+    justify-content: center;
+    margin: 0 auto;
+    outline: none;
+    width: 100px;
+  }
+  
+  &__progress-bar {
+    margin: 8px 0;
+
+    .uppy-ProgressBar {
+      background-color: #E8EBF1;
+      height: 5px;
+    }
+
+    .uppy-ProgressBar-inner {
+      background-color: #01BC8B;
+      height: 100%;
+      transition: 1.0s;
+    }
+
+    .uppy-ProgressBar-percentage {
+      font-size: 0px;
+    }
+  }
+}
