@@ -23,7 +23,7 @@
             <td>
               <div class="photos__table__name">
                 <%= image_tag photo.image_url %>
-                <span><%= photo.name %></span>
+                <span><%= link_to photo.name, edit_photo_path(photo) %></span>
               </div>
             </td>
             <td><%= photo.updated_at.strftime('%a %d, %Y') %></td>
