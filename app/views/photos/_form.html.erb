@@ -1,4 +1,4 @@
-<%= form_with model: photo do |f| %>
+<%= form_with model: photo, class: 'form' do |f| %>
   <%= f.hidden_field :image, value: photo.cached_image_data, class: 'form__field form__field--data' %>
 
   <div class="form__group">
@@ -20,12 +20,12 @@
   <div class="form__progress-bar"></div>
 
   <%= f.submit 'Confirm', class: 'form__button' %>
-<% end %>
 
-<div class="form__alert form__alert-error">
-  <ul>
-    <% photo.errors.full_messages.each do |message| %>
-      <li><%= message  %></li>
-    <% end %>
-  </ul>
-</div>
+  <div class="form__alert form__alert--error">
+    <ul>
+      <% photo.errors.full_messages.each do |message| %>
+        <li><%= message  %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

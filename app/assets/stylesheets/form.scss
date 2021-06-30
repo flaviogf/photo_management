@@ -1,7 +1,11 @@
 .form {
+  .field_with_errors + input {
+    width: 100%;
+  }
+
   &__group {
-    align-items: center;
     display: flex;
+    flex-direction: column;
     margin: 13px 0;
     width: 100%;
 
@@ -24,7 +28,9 @@
 
   &__label {
     color: #777777;
+    display: block;
     font-weight: 500;
+    margin-bottom: 5px;
     margin-right: 13px;
   }
 
@@ -33,6 +39,7 @@
     border-radius: 3px;
     height: 35px;
     outline: none;
+    padding: 0 13px;
     width: 100%;
   }
 
@@ -63,11 +70,46 @@
     .uppy-ProgressBar-inner {
       background-color: #01BC8B;
       height: 100%;
-      transition: 1.0s;
+      transition: 0.65s;
     }
 
     .uppy-ProgressBar-percentage {
       font-size: 0px;
     }
+  }
+
+  &__alert {
+    animation-name: slide-up;
+    animation-duration: 0.35s;
+    bottom: 16px;
+    position: fixed;
+    left: 16px;
+
+    &--error {
+      li { 
+        align-items: center;
+        background-color: #ff4d4f;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        border-radius: 4px;
+        color: white;
+        display: flex;
+        font-size: 16px;
+        font-weight: 500;
+        height: 45px;
+        margin: 13px 0;
+        padding: 0 16px;
+        width: 225px;
+      }
+    }
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100vh);
+  }
+
+  to {
+    transform: translateY(0px);
   }
 }
