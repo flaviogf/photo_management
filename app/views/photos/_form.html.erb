@@ -6,15 +6,24 @@
     <%= f.text_field :name, class: 'form__field' %>
   </div>
 
-  <div class="form__group form__group--file-upload">
-    <%= f.label :image, class: 'form__label' %>
-    <%= f.file_field :image, class: 'form__field form__field--file' %>
-  </div>
-
   <% if photo.image_url.present? %>
-    <%= image_tag photo.image_url, class: 'form__image-preview', height: 600 %>
+    <div class="form__group form__group--file-upload hidden">
+      <%= f.label :image, class: 'form__label' %>
+      <%= f.file_field :image, class: 'form__field form__field--file' %>
+    </div>
+
+    <div class="form__image-preview-wrapper form__image-preview-wrapper--with-image">
+        <%= image_tag photo.image_url, class: 'form__image-preview', height: 600 %>
+    </div>
   <% else %>
-    <img class="form__image-preview"></img>
+    <div class="form__group form__group--file-upload">
+      <%= f.label :image, class: 'form__label' %>
+      <%= f.file_field :image, class: 'form__field form__field--file' %>
+    </div>
+
+    <div class="form__image-preview-wrapper">
+      <img class="form__image-preview"></img>
+    </div>
   <% end %>
   
   <div class="form__progress-bar"></div>
