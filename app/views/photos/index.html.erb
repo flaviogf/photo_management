@@ -15,6 +15,7 @@
           <th>Name</th>
           <th>Last modified</th>
           <th>File size</th>
+          <th style="width: 113px;"></th>
         </tr>
       </thead>
       <tbody>
@@ -28,6 +29,7 @@
             </td>
             <td><%= photo.updated_at.strftime('%a %d, %Y') %></td>
             <td><%= '%d MB' % [photo.image.size / 1000] %></td>
+            <td style="width: 113px;"><%= link_to 'Destroy', photo_path(photo), class: 'photos__destroy', method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
       </tbody>

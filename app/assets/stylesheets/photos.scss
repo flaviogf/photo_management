@@ -27,10 +27,12 @@
       height: 36px;
       justify-content: center;
       text-decoration: none;
+      width: 105px;
     }
   }
 
   &__search {
+    display: none;
     position: relative;
 
     label {
@@ -52,7 +54,7 @@
       border: 1px solid #ccc;
       border-radius: 4px;
       height: 38px;
-      margin: 13px 0;
+      margin: 13px 0 0 0;
       padding: 0 0 0 92px;
       outline: none;
       width: 100%;
@@ -60,6 +62,7 @@
   }
 
   &__table {
+    margin-top: 13px;
     width: 100%;
 
     thead {
@@ -111,5 +114,20 @@
         text-decoration: none;
       }
     }
+  }
+
+  &__destroy {
+    align-items: center;
+    background-color: #ff4d4f;
+    border: 1px solid #ff4d4f;
+    border-radius: 2px;
+    color: #FFFFFF;
+    display: flex;
+    padding: 0 13px;
+    height: 36px;
+    justify-content: center;
+    margin: 0 0 0 auto;
+    max-width: 105px;
+    text-decoration: none;
   }
 }
