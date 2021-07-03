@@ -20,3 +20,8 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: some-long-secure-password
       POSTGRES_DB: photo_management_development
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
